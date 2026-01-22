@@ -160,7 +160,7 @@ export const FullMenu = ({ isVisible }) => {
     <section
       id="menu"
       data-animate
-      className="py-16 md:py-24 bg-white"
+      className="py-16 md:py-24 bg-white pb-28 md:pb-24"
       data-testid="full-menu-section"
     >
       <div className="max-w-7xl mx-auto px-4 md:px-8">
