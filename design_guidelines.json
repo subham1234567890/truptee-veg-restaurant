@@ -1,0 +1,153 @@
+{
+  "project_name": "Truptee Veg Restaurant",
+  "design_philosophy": {
+    "identity": "E1: The Anti-AI Designer",
+    "theme": "The Modern Malgudi - Authentic Warmth meets Digital Utility",
+    "core_values": [
+      "Fusion over Imitation: Traditional South Indian aesthetics mixed with modern SaaS-level utility",
+      "Emotion First: Every interaction should feel 'homely' and 'hygienic'",
+      "Content is King: The food is the hero. No stock-photo generic people unless necessary",
+      "Mobile First: 80% of users will be on phone. Buttons must be thumb-friendly"
+    ]
+  },
+  "typography": {
+    "font_family": {
+      "heading": "Playfair Display, serif",
+      "body": "Poppins, sans-serif",
+      "accent": "Merriweather, serif"
+    },
+    "scale": {
+      "h1": "text-4xl md:text-6xl font-bold tracking-tight leading-tight",
+      "h2": "text-3xl md:text-4xl font-semibold tracking-tight",
+      "h3": "text-2xl md:text-3xl font-medium",
+      "body_lg": "text-lg leading-relaxed",
+      "body_base": "text-base leading-relaxed",
+      "caption": "text-sm tracking-wide uppercase text-muted-foreground"
+    },
+    "rules": [
+      "Use Playfair Display for all Section Headings and Dish Names",
+      "Use Poppins for descriptions, prices, and UI elements (buttons, nav)",
+      "Never use Inter for headings",
+      "Ensure 4.5:1 contrast ratio for all text"
+    ]
+  },
+  "colors": {
+    "palette": {
+      "primary": "#1E6F5C",
+      "primary_foreground": "#FFFFFF",
+      "secondary": "#C97C3D",
+      "secondary_foreground": "#FFFFFF",
+      "background": "#FAFAF7",
+      "foreground": "#2B2B2B",
+      "accent": "#D4A373",
+      "muted": "#F2F2F0",
+      "border": "#E5E5E0"
+    },
+    "usage": {
+      "primary": "Main CTAs, Active States, Heavy Borders, Icons",
+      "secondary": "Price tags, 'Best Seller' badges, Hover states",
+      "background": "Main canvas (apply subtle noise texture if possible)",
+      "accent": "Star ratings, Dividers, Decorative elements",
+      "text": "Main content. Never use pure black (#000000)"
+    },
+    "tailwind_config_extension": {
+      "colors": {
+        "brand": {
+          "green": "#1E6F5C",
+          "cream": "#FAFAF7",
+          "brown": "#C97C3D",
+          "charcoal": "#2B2B2B",
+          "gold": "#D4A373"
+        }
+      }
+    }
+  },
+  "layout": {
+    "spacing": {
+      "container_padding": "px-4 md:px-8 lg:px-12",
+      "section_spacing": "py-16 md:py-24",
+      "element_spacing": "gap-4 md:gap-8"
+    },
+    "grid_system": {
+      "bento_grid": "grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6",
+      "menu_grid": "grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12"
+    },
+    "container_width": "max-w-7xl mx-auto"
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#1E6F5C] text-white hover:bg-[#165244] rounded-full px-8 py-3 font-medium transition-all shadow-lg hover:shadow-xl active:scale-95",
+      "secondary": "bg-transparent border-2 border-[#1E6F5C] text-[#1E6F5C] hover:bg-[#1E6F5C] hover:text-white rounded-full px-8 py-3 font-medium transition-all",
+      "whatsapp": "bg-[#25D366] text-white rounded-full p-4 shadow-lg hover:bg-[#20bd5a] transition-all fixed bottom-20 right-4 z-50 md:bottom-8 md:right-8 flex items-center gap-2"
+    },
+    "cards": {
+      "dish_card": "bg-white rounded-xl shadow-sm border border-[#E5E5E0] overflow-hidden hover:shadow-md transition-all group",
+      "feature_card": "bg-[#F2F2F0] p-8 rounded-2xl border border-transparent hover:border-[#D4A373] transition-all"
+    },
+    "navigation": {
+      "mobile_bottom_bar": "fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 flex justify-around items-center z-50 md:hidden shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]"
+    }
+  },
+  "assets": {
+    "images": {
+      "hero_dosa": "https://images.pexels.com/photos/20422121/pexels-photo-20422121.jpeg",
+      "hero_idli": "https://images.pexels.com/photos/14820415/pexels-photo-14820415.jpeg",
+      "hero_thali": "https://images.pexels.com/photos/17223838/pexels-photo-17223838.jpeg",
+      "hero_noodles": "https://images.pexels.com/photos/34170982/pexels-photo-34170982.jpeg",
+      "ambiance": "https://images.pexels.com/photos/10148453/pexels-photo-10148453.jpeg"
+    },
+    "icons": "Use Lucide React icons. Prefer rounded variants."
+  },
+  "sections": {
+    "hero": {
+      "style": "Split layout or Bento Grid. Left: Strong Headline + CTA. Right: High-quality food collage.",
+      "content": "Headline: 'Authentic Taste of South India in Bhubaneswar'. Subhead: 'Pure Veg | Hygienic | Homely'. CTA: 'Order Now' & 'View Menu'"
+    },
+    "menu": {
+      "style": "Categorized List. No PDF. Use 'Tabs' component for categories (South Indian, Chinese, etc.).",
+      "item_style": "Flex row. Name (Bold) ....... Price (Color). Description below."
+    },
+    "location": {
+      "style": "Full width map embed with overlay card for address and hours."
+    }
+  },
+  "motion": {
+    "page_load": "Staggered fade-in for hero elements.",
+    "scroll": "Use IntersectionObserver to fade-in sections as they scroll into view.",
+    "hover": "Subtle lift (-2px) on cards. Color fill on outline buttons."
+  },
+  "accessibility": {
+    "contrast": "Ensure all text on #FAFAF7 is #2B2B2B or darker.",
+    "focus_states": "Visible focus rings on all interactive elements (color: #1E6F5C).",
+    "aria_labels": "Required for all icon-only buttons (WhatsApp, Call)."
+  },
+  "instructions_to_main_agent": [
+    "1. Install 'lucide-react' and 'framer-motion' if not present.",
+    "2. Configure Tailwind with the custom colors immediately.",
+    "3. Create the 'Sticky Bottom Bar' for mobile first - this is a key requirement.",
+    "4. Use the provided image URLs for the respective sections.",
+    "5. Do not use generic 'Lorem Ipsum'. Use real food names (Masala Dosa, Idli, Veg Hakka Noodles, Paneer Butter Masala).",
+    "6. Ensure the 'Parcel Charge: ₹5/box' is mentioned in the menu or footer.",
+    "7. Add the 'Click-to-Call' functionality on the phone number: 933754213."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy",
+    "Use glass-morphism effects with backdrop filters (12-24px blur)",
+    "You MUST NOT apply universal transition. Eg: transition: all. This results in breaking transforms. Always add transitions for specific interactive elements like button, input excluding transforms",
+    "You MUST NOT center align the app container, ie do not add .App { text-align: center; } in the css file. This disrupts the human natural reading flow of text",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations & color relevant to the app style",
+    "NEVER: use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯📚🎭🎬🎪🎉🎊🎁🎀🎂🍰🎈🎨🎰💰💵💳🏦💎🪙💸🤑📊📈📉💹🔢🏆🥇 etc for icons.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations: separates good from extraordinary.",
+    "Main agent relies on these image URLs. Missing categories (especially sponsor logos) = main agent will use placeholder text which is FORBIDDEN",
+    "Prioritize using pre-existing components from src/components/ui when applicable",
+    "Create new components that match the style and conventions of existing components when needed",
+    "Examine existing components to understand the project's component patterns before creating new ones",
+    "Components MUST use named exports (export const ComponentName = ...)",
+    "Pages MUST use default exports (export default function PageName() {...})",
+    "Use sonner for toasts. Sonner component are located in /app/src/components/ui/sonner.tsx"
+  ]
+}
