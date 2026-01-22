@@ -198,7 +198,9 @@ export const FullMenu = ({ isVisible }) => {
         </div>
 
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="flex flex-wrap justify-center gap-2 mb-8 bg-transparent">
+          <TabsList className="flex gap-2 mb-8 bg-transparent
+             overflow-x-auto whitespace-nowrap
+             flex-nowrap justify-start md:justify-center px-1">
             {Object.keys(menuData).map((category) => (
               <TabsTrigger
                 key={category}
